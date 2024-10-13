@@ -1,7 +1,7 @@
 
 # Advanced Auth Project 🔒
 
-Welcome to the **Advanced Auth Tutorial Project**! This application serves as a comprehensive authentication system, allowing users to sign up, log in, verify their email, and manage their accounts securely.
+Welcome to the **Advanced Auth Project**! This application serves as a comprehensive authentication system, allowing users to sign up, log in, verify their email, and manage their accounts securely.
 
 ## 🛠️ Features
 
