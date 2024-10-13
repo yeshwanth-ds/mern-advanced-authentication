@@ -91,4 +91,4 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 ---
 
-Thank you for checking out the **Advanced Auth Tutorial Project**! If you have any questions or need assistance, feel free to reach out.
+Thank you for checking out the **Advanced Auth Project**! If you have any questions or need assistance, feel free to reach out.
