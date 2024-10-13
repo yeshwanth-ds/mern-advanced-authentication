@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Lock, Loader } from "lucide-react";
 import { Link } from "react-router-dom";
-import Input from "../components/Input";
+import Input from "../components/input";
 import { useAuthStore } from "../store/authStore";
 
 const LoginPage = () => {
@@ -35,8 +35,6 @@ const LoginPage = () => {
 						placeholder='Email Address'
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
-						className='transition-colors duration-200'
-						aria-label='Email Address' // Added for accessibility
 					/>
 
 					<Input
@@ -45,8 +43,6 @@ const LoginPage = () => {
 						placeholder='Password'
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
-						className='transition-colors duration-200'
-						aria-label='Password' // Added for accessibility
 					/>
 
 					<div className='flex items-center mb-6'>
@@ -54,23 +50,21 @@ const LoginPage = () => {
 							Forgot password?
 						</Link>
 					</div>
-
-					{error && <p className='text-[#E94B3CFF] font-semibold mb-2'>{error}</p>}
+					{error && <p className='text-red-500 font-semibold mb-2'>{error}</p>}
 
 					<motion.button
 						whileHover={{ scale: 1.02 }}
 						whileTap={{ scale: 0.98 }}
-						className='w-full py-3 px-4 bg-[#E94B3CFF] text-white font-bold rounded-lg shadow-lg
-						hover:bg-[#2D2926FF] focus:outline-none focus:ring-2 focus:ring-[#E94B3CFF] focus:ring-offset-2 focus:ring-offset-[#2D2926FF] transition duration-200'
+						className='w-full py-3 px-4 bg-gradient-to-r from-[#E94B3CFF] to-[#2D2926FF] text-white font-bold rounded-lg shadow-lg hover:from-[#E94B3CFF] hover:to-[#2D2926FF] focus:outline-none focus:ring-2 focus:ring-[#E94B3CFF] focus:ring-offset-2 focus:ring-offset-[#2D2926FF] transition duration-200'
 						type='submit'
-						disabled={isLoading} // Disable the button during loading
+						disabled={isLoading}
 					>
-						{isLoading ? <Loader className='w-6 h-6 animate-spin mx-auto' /> : "Login"}
+						{isLoading ? <Loader className='w-6 h-6 animate-spin  mx-auto' /> : "Login"}
 					</motion.button>
 				</form>
 			</div>
 			<div className='px-8 py-4 bg-[#2D2926FF] bg-opacity-50 flex justify-center'>
-				<p className='text-sm text-gray-400'>
+				<p className='text-sm text-[#E94B3CFF]'>
 					Don't have an account?{" "}
 					<Link to='/signup' className='text-[#E94B3CFF] hover:underline'>
 						Sign up
