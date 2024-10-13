@@ -36,6 +36,7 @@ const LoginPage = () => {
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 						className='transition-colors duration-200'
+						aria-label='Email Address' // Added for accessibility
 					/>
 
 					<Input
@@ -45,6 +46,7 @@ const LoginPage = () => {
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
 						className='transition-colors duration-200'
+						aria-label='Password' // Added for accessibility
 					/>
 
 					<div className='flex items-center mb-6'>
@@ -52,6 +54,7 @@ const LoginPage = () => {
 							Forgot password?
 						</Link>
 					</div>
+
 					{error && <p className='text-[#E94B3CFF] font-semibold mb-2'>{error}</p>}
 
 					<motion.button
@@ -60,7 +63,7 @@ const LoginPage = () => {
 						className='w-full py-3 px-4 bg-[#E94B3CFF] text-white font-bold rounded-lg shadow-lg
 						hover:bg-[#2D2926FF] focus:outline-none focus:ring-2 focus:ring-[#E94B3CFF] focus:ring-offset-2 focus:ring-offset-[#2D2926FF] transition duration-200'
 						type='submit'
-						disabled={isLoading}
+						disabled={isLoading} // Disable the button during loading
 					>
 						{isLoading ? <Loader className='w-6 h-6 animate-spin mx-auto' /> : "Login"}
 					</motion.button>
